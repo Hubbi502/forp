@@ -1,0 +1,8 @@
+@import "tailwindcss";
+body {
+  @apply bg-[#000000] text-white;
+}
+
+.rounded-5xl {
+  border-radius: 5rem;
+}
