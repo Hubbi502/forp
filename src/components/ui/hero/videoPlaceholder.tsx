@@ -1,8 +1,8 @@
 
-export default function VideoPlaceholder() {
+export default function VideoPlaceholder()   {
   return (
-    <div className="w-[80%] h-[90vh] bg-[#292929] rounded-3xl mt-10 flex justify-center items-center">
-      <button className="w-16 h-16 rounded-full bg-[#a8a8a8] active:bg-[#8a8a8a] flex justify-center items-center">
+    <div className="w-[80%] h-[40svw] bg-[#292929] rounded-3xl mt-10 flex justify-center items-center">
+      <button className="w-[8%] h-[6.33svw] rounded-full bg-[#a8a8a8] active:bg-[#8a8a8a] flex justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

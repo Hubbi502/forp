@@ -6,3 +6,6 @@ body {
 .rounded-5xl {
   border-radius: 5rem;
 }
+html {
+  scroll-behavior: smooth;
+}
