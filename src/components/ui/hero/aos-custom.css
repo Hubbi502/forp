@@ -1,0 +1,10 @@
+[data-aos="flip-down-lite"] {
+  transform: perspective(800px) rotateX(30deg); /* gentler flip */
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="flip-down-lite"].aos-animate {
+  transform: perspective(800px) rotateX(0);
+  opacity: 1;
+}
