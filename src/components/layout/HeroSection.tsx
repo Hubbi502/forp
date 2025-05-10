@@ -1,7 +1,7 @@
 import HeroSectionTitle from "../ui/hero/title"
 import VideoPlaceholder from "../ui/hero/videoPlaceholder"
 import WhatsAppButton from "../ui/hero/whatsappButton"
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
