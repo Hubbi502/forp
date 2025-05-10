@@ -1,6 +1,6 @@
 export default function IngredientsCard() {
   return (
-    <div className="w-[12rem] h-auto flex flex-col items-center text-center mx-5">
+    <article className="w-[12rem] h-auto flex flex-col items-center text-center mx-5">
       {/* image placeholder */}
       <div className="w-full h-[12rem] bg-[#292929] rounded-3xl " />
       
@@ -9,6 +9,6 @@ export default function IngredientsCard() {
       <p className="mt-2 text-[#ffffff90] break-words px-2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint earum inventore voluptatem ratione, quidem iusto?
       </p>
-    </div>
+    </article>
   )
 }
