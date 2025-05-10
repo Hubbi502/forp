@@ -10,7 +10,7 @@ export default function About() {
           Produk ini terbuat dari macam-macam herbal seperti daun sirih, jahe merah, temulawak, dan kayu manis yang dikenal memiliki banyak manfaat untuk kesehatan. 
           <br /><br />Kandungan alami ini dipilih secara khusus untuk memberikan hasil yang optimal dan tetap aman digunakan secara rutin.
           </p>
-          <a href="#ingredients" className="bg-white text-black p-2 mt-6 rounded-[0.5rem] font-bold inline-block" >Lihat Rincian Bahan</a>
+          <a href="#ingredients" className="bg-white text-black p-2 mt-6 rounded-[0.5rem] font-bold inline-block hover:bg-black hover:text-white duration-300 ease-in " >Lihat Rincian Bahan</a>
         </div>
     </div>
   )
