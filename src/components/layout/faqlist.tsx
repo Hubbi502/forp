@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface FAQItemProps {
   question: string;
@@ -8,21 +11,29 @@ interface FAQItemProps {
 const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const answerId = `faq-answer-${question.replace(/\s+/g, '-').toLowerCase()}`;
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Global animation duration
+      once: true, // Only animate once
+    });
+  }, []);
 
   return (
-    <article className="border-b border-gray-200 py-[2svw]">
+    <article className="border-b border-gray-200 py-[2svw]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
       <button
         className="flex justify-between items-center w-full text-left"
         onClick={() => setIsOpen((open) => !open)}
         aria-expanded={isOpen}
         aria-controls={answerId}
+        
       >
-        <span className="text-[2svw] font-medium text-white">{question}</span>
+        <span className="text-[3svw] md:text-[2svw] lg:text-[1.8svw] font-medium text-white" >{question}</span>
         <svg
           className={`w-[2.5svw] h-[2.5svw] text-gray-500 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          
         >
           <path
             strokeLinecap="round"
@@ -36,8 +47,9 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         <div
           id={answerId}
           className="mt-[1svw] text-gray-300"
+          
         >
-          <p className="text-[1.5svw]">{answer}</p>
+          <p className="text-[3svw] md:text-[1.5svw]">{answer}</p>
         </div>
       )}
     </article>
@@ -75,17 +87,25 @@ const faqs = [
   }
 ];
 
-const FAQSection = () => (
+const FAQSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Global animation duration
+      once: true, // Only animate once
+    });
+  }, []);
+  return(
   <section
-    className="bg-gradient-to-b from-[#0B0B0B] via-white/5 to-red-950/50 max-w-[80svw] mt-[15svh] lg:mt-[15rem] mx-auto px-[5svw] py-[6svw] shadow-lg rounded-2xl text-white "
+    className="bg-gradient-to-b from-[#0B0B0B] via-white/5 to-red-950/50 max-w-full md:max-w-[80%] mt-[15svh] lg:mt-[15rem] mx-auto px-[5svw] py-[6svw] shadow-lg rounded-2xl text-white "
     aria-labelledby="faq-title"
   >
     <header className="mb-[3svw]">
-      <div className="w-[10svw] bg-gradient-to-b from-white/20 to-white/50 mx-auto rounded-full mb-[1.5svw] py-[0.8svw]">
+      <div className="w-[10svw] bg-gradient-to-b from-white/20 to-white/50 mx-auto rounded-full mb-[1.5svw] py-[0.8svw]"
+          data-aos="fade-up">
         <h2 id="faq-title" className="text-[2svw] font-bold text-center">FAQ</h2>
       </div>
-      <h3 className="text-[4svw] text-center mb-[2svw]">Frequently Asked Questions</h3>
-      <p className="text-center mb-[6svw] max-w-[50svw] mx-auto text-[1.5svw]">
+      <h3 className="text-[6svw] md:text-[3.6svw] text-center mb-[2svw]" data-aos="fade-up">Frequently Asked Questions</h3>
+      <p className="text-center mb-[6svw] max-w-[80svw] mx-auto text-[2.5svw] md:text-[1.5svw]"     data-aos="fade-up">
         Here is our most frequently asked questions. If you can't find what you are looking for don't hesitate to contact us.
       </p>
     </header>
@@ -95,11 +115,12 @@ const FAQSection = () => (
       ))}
     </section>
     <footer className="mt-[8svw] text-center">
-      <button className="px-[4svw] py-[1.2svw] bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-300">
+      <button     data-aos="fade-up" className="px-[4svw] py-[1.2svw] bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-300">
         Contact us
       </button>
     </footer>
   </section>
-);
+  )
+};
 
 export default FAQSection;
