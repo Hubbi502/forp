@@ -1,6 +1,6 @@
 import HeroSectionTitle from "../ui/hero/title"
 import VideoPlaceholder from "../ui/hero/videoPlaceholder"
-import WhatsAppButton from "../ui/hero/whatsappButton"
+import SocialMediButton from "../ui/hero/SocialMediaButton"
 import  { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -18,7 +18,7 @@ export default function HeroSection() {
     <div className="flex flex-col items-center justify-center bg-[#121212]" data-aos="fade-up" data-aos-duration="1000">
       <HeroSectionTitle />
       <VideoPlaceholder />
-      <WhatsAppButton />
+      <SocialMediButton />
     </div>
   )
 }

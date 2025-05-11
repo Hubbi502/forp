@@ -1,12 +1,13 @@
-export default function WhatsAppButton() {
+
+export default function SocialMediaButton() {
   return (
-    <button className="mt-16 w-[60%] h-[13svw] md:h-[12svw] lg:h-[11svw] bg-[#21A050] mb-16 rounded-5xl border-[0.5rem] md:border-[0.75rem] lg:border-[1rem] border-[#004218] flex items-center">
+    <button className="mt-16 w-[70%] h-[13svw] md:h-[12svw] lg:h-[11svw] bg-[#21A050] mb-16 rounded-5xl border-[1svw] border-[#004218] flex items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className="w-[20%] h-[20svw] ml-8 "
+        className="w-[18%] h-[18svw] md:w-[20%] md:h-[20svw] ml-[2.2svw]"
       >
         <path
           fill="#2D3C52"
@@ -14,7 +15,9 @@ export default function WhatsAppButton() {
         />
       </svg>
 
-      <h2 className="text-center text-[#001122] text-xl md:text-2xl lg:text-4xl font-bold w-full">Pesan Forps Via Whatsapp</h2>
+      <h2 className="text-center text-[#001122] text-[4svw] font-bold w-full">
+        Pesan Forps Via Whatsapp
+      </h2>
     </button>
   );
 }

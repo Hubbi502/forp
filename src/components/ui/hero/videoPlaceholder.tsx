@@ -27,7 +27,7 @@ export default function VideoPlaceholder()   {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="feather feather-play"
+          className="w-[80%] h-[80%] "
         >
           <polygon points="5 3 19 12 5 21 5 3"></polygon>
         </svg>
